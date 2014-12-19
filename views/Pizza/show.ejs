@@ -1,0 +1,19 @@
+<form class="show">
+	<div class="form-group">
+		<h2> a pizza... </h2>
+		
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= pizza.name %>" name="name" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= pizza.desc %>" name="desc" type="text" class="form-control" disabled/>
+	</div>
+
+</div>
+</div>
+<a href="/pizza/edit/<%=pizza.id %>" class="btn btn-default">Edit</a> |
+<a href="/pizza">Back to list</a>
+</form>

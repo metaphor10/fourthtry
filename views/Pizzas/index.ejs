@@ -1,0 +1,33 @@
+<div class="container">
+	<h3>Pizzas Listing</h3>
+	<table class='table table-hover table-condensed'>
+	<tr>
+
+	<th> name </th>
+
+	<th> desc </th>
+
+	<th></th>
+	<th></th>
+	<th></th>
+</tr>
+	<% _.forEach(pizzass, function(pizzas) { %>
+    		<tr data-id="<%=pizzas.id %>" data-model="pizzas">
+		
+			<td><%= pizzas.name%></td>
+		
+			<td><%= pizzas.desc%></td>
+		
+			<td><a href="/pizzas/show/<%=pizzas.id %>"  class="btn btn-primary btn-sm" role="button">Show</a></td>
+			<td><a href="/pizzas/edit/<%=pizzas.id %>"  class="btn btn-primary btn-sm" role="button">Edit</a></td>
+
+			<td><form action="/pizzas/destroy/<%=pizzas.id %>" method="POST">
+				<input type="hidden" name="_method" value="delete"/>
+				<input type="submit" value="Delete"  class="btn btn-danger btn-sm" role="button"/>
+			</form></td>
+		</tr>
+<% }) %>
+	</table>
+	<a href="/pizzas/new/" class="btn btn-success btn-sm" role="button">New Pizzas</a> |
+	<a href="/">all scaffolds</a>
+</div>

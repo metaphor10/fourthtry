@@ -1,0 +1,9 @@
+
+[0m[0m
+[0m  The About Controller[0m
+[0m    when we load the about page[0m
+[2K[0G    [31m  1) should render the view[0m
+
+
+[92m [0m[32m 0 passing[0m[90m (16ms)[0m
+

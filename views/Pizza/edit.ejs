@@ -1,0 +1,27 @@
+	<form action="/pizza/update/<%=pizza.id%>" method="POST" class="edit">
+	<div class="form-group">
+		<h2> editing a pizza... </h2>
+		<% if(flash && flash.err) { %>
+<ul class="alert alert-success">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+		
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= pizza.name %>" name="name" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= pizza.desc %>" name="desc" type="text" class="form-control"/>
+	</div>
+
+		</div>
+		<input type="submit" value="Update Pizza" class="btn btn-default"/>
+		<a href="/pizza/show/<%=pizza.id %>" class="btn btn-danger">Cancel</a>
+	</form>
+	
+	
