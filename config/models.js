@@ -19,7 +19,8 @@ module.exports.models = {
   ***************************************************************************/
   // connection: 'localDiskDb',
 
-  /***************************************************************************
+  migrate: 'alter'
+/***************************************************************************
   *                                                                          *
   * How and whether Sails will attempt to automatically rebuild the          *
   * tables/collections/etc. in your schema.                                  *

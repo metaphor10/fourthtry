@@ -4,7 +4,7 @@
  * @description :: Server-side logic for managing Pizzas
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
-
+//require('../models/Pizza');
 module.exports = {
 
   'new': function(req,res){
